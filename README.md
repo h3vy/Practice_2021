@@ -1,2 +1,2 @@
-Lesson 1 - Add dependencys
-Lesson 2 - Create first bean
+1. Lesson 1 - Add dependencys 
+2. Lesson 2 - Create first bean
