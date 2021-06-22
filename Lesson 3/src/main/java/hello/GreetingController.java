@@ -1,5 +1,6 @@
 package hello;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.util.concurrent.atomic.AtomicLong;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @RestController
 public class GreetingController {
@@ -45,7 +47,15 @@ public class GreetingController {
 //        }
 //        return value;
 //    }
-
-
+//    public void setCookie(HttpServletRequest request, HttpServletResponse response) throws IOException {
+//        PrintWriter out = response.getWriter();
+//        try {
+//            response.addCookie(new Cookie("Stepan", "cookie added!"));
+//            out.println("Cookie is set");
+//        }
+//        finally {
+//            out.close();
+//        }
+//    }
 
 }
