@@ -32,7 +32,7 @@ public class BookController {
     }
 
     @GetMapping("/new")
-    public String newPerson(Model model){
+    public String newBook(Model model){
         model.addAttribute("Book", new Book());
         return "booksStorage/new";
     }
@@ -40,6 +40,12 @@ public class BookController {
     @PostMapping()
     public String create(@ModelAttribute("Book") Book book ){
         booksStorage.save(book);
+        return "redirect:/booksStorage";
+    }
+
+    @DeleteMapping("/{id}")
+    public String delete(@PathVariable("id") int id) {
+        booksStorage.delete(id);
         return "redirect:/booksStorage";
     }
 
