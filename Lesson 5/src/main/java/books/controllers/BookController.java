@@ -43,7 +43,7 @@ public class BookController {
         return "redirect:/booksStorage";
     }
 
-    @DeleteMapping("/{id}")
+    @PostMapping("/{id}")
     public String delete(@PathVariable("id") int id) {
         booksStorage.delete(id);
         return "redirect:/booksStorage";
