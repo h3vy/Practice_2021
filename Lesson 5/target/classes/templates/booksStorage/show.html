@@ -11,11 +11,11 @@
 <br>
 <div class="row w-25 mx-auto">
     <p>Название книги:</p>
-    <p style="font-size: 2vmin" th:text="${Book.getName()}">Name</p>
+    <p style="font-size: 3vmin" th:text="${Book.getName()}">Name</p>
     <p>Автор книги:</p>
-    <p style="font-size: 2vmin" th:text="${Book.getAuthor()}">Author</p>
+    <p style="font-size: 3vmin" th:text="${Book.getAuthor()}">Author</p>
     <p>ID книги:</p>
-    <p style="font-size: 2vmin" th:text="${Book.getId()}">Id</p>
+    <p style="font-size: 3vmin" th:text="${Book.getId()}">Id</p>
 
     <div class="text-center">
         <form th:method="DELETE" th:action="@{/booksStorage/{id}(id=${Book.getId()})}">
