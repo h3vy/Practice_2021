@@ -19,7 +19,7 @@ public class BookController {
         this.booksStorage = booksStorage;
     }
 
-    @GetMapping() // Адрес пустой т.к. мы изначально будем в booksStorage
+    @GetMapping("") // Адрес пустой т.к. мы изначально будем в booksStorage
     public String index(Model model){
         model.addAttribute("booksList", booksStorage.index());
         return "booksStorage/index";

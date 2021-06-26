@@ -4,14 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Show</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body>
-<p th:text="${Book.getName()}">Name</p>
-<p th:text="${Book.getAuthor()}">Author</p>
-<p th:text="${Book.getId()}">Id</p>
+<h1 class="text-center" th:text="${Book.getName()}"> h1 </h1>
+<br>
+<div class="row w-25 mx-auto">
+    <p>Название книги:</p>
+    <p style="font-size: 2vmin" th:text="${Book.getName()}">Name</p>
+    <p>Автор книги:</p>
+    <p style="font-size: 2vmin" th:text="${Book.getAuthor()}">Author</p>
+    <p>ID книги:</p>
+    <p style="font-size: 2vmin" th:text="${Book.getId()}">Id</p>
 
-<form th:method="DELETE" th:action="@{/booksStorage/{id}(id=${Book.getId()})}">
-    <input type="submit" value="Delete"/>
-</form>
+    <div class="text-center">
+        <form th:method="DELETE" th:action="@{/booksStorage/{id}(id=${Book.getId()})}">
+            <input type="submit" value="Delete" class="btn btn-danger"/>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
