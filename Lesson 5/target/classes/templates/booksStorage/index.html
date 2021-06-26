@@ -9,15 +9,6 @@
 <body>
 <h1 class="text-center">Библиотека</h1>
 
-<!--<div class="list" th:each="Book : ${booksList}">-->
-<!-- <label>-->
-<!--     <a th:href="@{/booksStorage/{id}(id=${Book.getId()})}" th:text="${Book.getName()}">user</a>-->
-<!--     <form th:method="DELETE" th:action="@{/booksStorage/{id}(id=${Book.getId()})}">-->
-<!--         <input type="submit" value="Delete"/>-->
-<!--     </form>-->
-<!-- </label>-->
-<!--</div>-->
-
 <table class="table table-striped">
     <tr>
         <th style="font-size: 2vmin" >Название книги</th>
@@ -38,7 +29,6 @@
         </tr>
     </div>
 </table>
-
 <br>
 
 <div class="text-center">
