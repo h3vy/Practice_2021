@@ -11,6 +11,10 @@
     <module>Lesson 3</module>
     <module>Lesson 4</module>
       <module>Lesson 5</module>
+      <module>Lesson 6</module>
+      <module>Lesson 6</module>
+    <module>Lesson 6</module>
+    <module>Lesson_6</module>
   </modules>
   <properties>
     <java-version>1.8</java-version>
